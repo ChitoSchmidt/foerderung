@@ -28,10 +28,11 @@
            ======================================== */
         :root {
             --dark-primary: #0f1923;
+            --dark-secondary: #131f2b;
             --dark-secondary: #162231;
             --dark-card: #1A3044;
-            --dark-deep: #0b1219;
-            --dark-footer: #0a0f14;
+            --dark-deep: #0f1923;
+            --dark-footer: #0a1018;
             --dark-nav: #0a0f14;
             --cyan: #00E7EF;
             --cyan-glow: rgba(105, 228, 237, 0.8);
@@ -282,7 +283,7 @@
            ======================================== */
         .hero {
             padding: 180px 0 72px;
-            background: radial-gradient(at top center, #162231 44%, #0f1923 71%);
+            background: var(--dark-secondary);
             position: relative;
             overflow: hidden;
         }
@@ -486,7 +487,7 @@
            Förderprogramme Cards
            ======================================== */
         .programs {
-            background: linear-gradient(180deg, #0f1923 3%, #162231 50%, #0f1923 97%);
+            background: var(--dark-secondary);
             padding: 100px 0;
         }
 
@@ -583,7 +584,7 @@
            Process Steps
            ======================================== */
         .process {
-            background: radial-gradient(at top center, #162231 44%, #0f1923 71%);
+            background: var(--dark-primary);
             padding: 100px 0;
         }
 
@@ -660,10 +661,8 @@
            Advantages Section
            ======================================== */
         .advantages {
-            background: var(--dark-deep);
+            background: var(--dark-secondary);
             padding: 100px 0;
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
         }
 
         .advantages-grid {
@@ -787,7 +786,7 @@
            CTA Section
            ======================================== */
         .cta {
-            background: radial-gradient(at center, #162231 30%, #0f1923 80%);
+            background: var(--dark-secondary);
             padding: 100px 0;
             text-align: center;
             position: relative;
@@ -989,7 +988,7 @@
            FAQ Section
            ======================================== */
         .faq {
-            background: linear-gradient(180deg, #0f1923 3%, #162231 50%, #0f1923 97%);
+            background: var(--dark-primary);
             padding: 100px 0;
         }
 
