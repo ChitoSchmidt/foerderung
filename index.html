@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Förderprogramme für KMU | Chito IT – Dein IT-Partner aus der Pfalz</title>
+    <meta name="description" content="Staatliche Förderung für IT-Modernisierung – bis zu 50% Zuschuss für KMU in der Pfalz. Kostenlose Erstberatung bei Chito IT.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.chito-it.de/foerderung">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="IT-Förderprogramme für KMU | Chito IT">
+    <meta property="og:description" content="Bis zu 50 % Zuschuss für IT & Digitalisierung. Kostenlose Erstberatung für KMU.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chito-it.de/foerderung">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23101A25'/><text x='16' y='23' font-family='Inter,sans-serif' font-size='20' font-weight='700' fill='%2300E7EF' text-anchor='middle'>C</text></svg>" type="image/svg+xml">
+
+    <!-- Fonts: Inter (headings) + Roboto (body) matching chito-it.de -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========================================
+           CSS Custom Properties – Chito IT Corporate Design
+           ======================================== */
+        :root {
+            --dark-primary: #101A25;
+            --dark-secondary: #182636;
+            --dark-card: #1A3044;
+            --dark-deep: #081F2E;
+            --dark-footer: #141414;
+            --dark-nav: #0A0A0A;
+            --cyan: #00E7EF;
+            --cyan-glow: rgba(105, 228, 237, 0.8);
+            --cyan-glow-soft: rgba(105, 228, 237, 0.3);
+            --cyan-glow-subtle: rgba(105, 228, 237, 0.15);
+            --white: #FFFFFF;
+            --text-muted: #B8B8B8;
+            --text-light: #DDD;
+            --border-subtle: #2C3A4D;
+            --green: #10B981;
+            --red: #EF4444;
+            --font-heading: 'Inter', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        /* ========================================
+           Reset & Base
+           ======================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            color: var(--text-light);
+            background: var(--dark-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--white);
+        }
+
+        /* ========================================
+           Typography
+           ======================================== */
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 50px; }
+        h2 { font-size: 40px; margin-bottom: 20px; }
+        h3 { font-size: 24px; }
+        h4 { font-size: 18px; }
+
+        p {
+            color: var(--text-muted);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--cyan);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* ========================================
+           Layout
+           ======================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* ========================================
+           Buttons – Chito IT Style
+           ======================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-body);
+            font-weight: 800;
+            font-size: 18px;
+            padding: 18px 36px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: #292929;
+        }
+
+        .btn-primary:hover {
+            color: #292929;
+            box-shadow: 0 0 10px var(--cyan-glow), 0 0 20px rgba(105, 228, 237, 0.4), 0 0 40px rgba(105, 228, 237, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--cyan);
+            border: 2px solid var(--cyan);
+        }
+
+        .btn-outline:hover {
+            background: var(--cyan);
+            color: #292929;
+            box-shadow: 0 0 10px var(--cyan-glow);
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 10px rgba(105, 228, 237, 0.5), 0 0 20px rgba(105, 228, 237, 0.4), 0 0 40px rgba(105, 228, 237, 0.2);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(105, 228, 237, 0.8), 0 0 30px rgba(105, 228, 237, 0.6), 0 0 60px rgba(105, 228, 237, 0.3);
+        }
+
+        /* ========================================
+           Navigation
+           ======================================== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--dark-nav);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-logo:hover {
+            color: var(--white);
+        }
+
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-cta {
+            font-size: 14px !important;
+            padding: 10px 22px !important;
+            font-weight: 800 !important;
+            background: transparent !important;
+            border: 1px solid var(--cyan) !important;
+            color: var(--cyan) !important;
+            box-shadow: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--cyan) !important;
+            color: var(--dark-primary) !important;
+        }
+
+        .nav-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* ========================================
+           Hero Section
+           ======================================== */
+        .hero {
+            padding: 180px 0 72px;
+            background: radial-gradient(at top center, #182636 44%, #101A25 71%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 231, 239, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ---- Floating Card Stack ---- */
+        .hero-cards {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            z-index: 2;
+            margin-left: -40px;
+            padding-top: 20px;
+        }
+
+        .hero-card {
+            position: absolute;
+            width: 420px;
+            padding: 36px 32px;
+            background: rgba(26, 48, 68, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 231, 239, 0.25);
+            border-radius: 16px;
+            color: var(--white);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: visible;
+        }
+
+        .hero-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 231, 239, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-card-3 {
+            top: 0;
+            left: 60px;
+            transform: rotate(6deg);
+            z-index: 1;
+            animation: floatCard3 5s ease-in-out infinite;
+        }
+
+        .hero-card-2 {
+            top: 80px;
+            left: 30px;
+            transform: rotate(-3deg);
+            z-index: 2;
+            animation: floatCard2 5s ease-in-out infinite;
+        }
+
+        .hero-card-1 {
+            top: 160px;
+            left: 0;
+            transform: rotate(1deg);
+            z-index: 3;
+            animation: floatCard1 5s ease-in-out infinite;
+            border-color: rgba(0, 231, 239, 0.45);
+            background: rgba(26, 48, 68, 0.7);
+        }
+
+        .hero-card-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .hero-card-value {
+            font-family: var(--font-heading);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+        }
+
+        @keyframes floatCard1 {
+            0%, 100% { transform: rotate(1deg) translateY(0); }
+            50% { transform: rotate(1deg) translateY(-10px); }
+        }
+
+        @keyframes floatCard2 {
+            0%, 100% { transform: rotate(-3deg) translateY(0); }
+            50% { transform: rotate(-3deg) translateY(-8px); }
+        }
+
+        @keyframes floatCard3 {
+            0%, 100% { transform: rotate(6deg) translateY(0); }
+            50% { transform: rotate(6deg) translateY(-6px); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 231, 239, 0.1);
+            border: 1px solid rgba(0, 231, 239, 0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--cyan);
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            max-width: 580px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: nowrap;
+        }
+
+        .hero-buttons .btn {
+            white-space: nowrap;
+            padding: 16px 28px;
+        }
+
+        /* ========================================
+           Stats Bar
+           ======================================== */
+        .stats {
+            background: var(--dark-deep);
+            padding: 60px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--cyan);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        /* ========================================
+           Förderprogramme Cards
+           ======================================== */
+        .programs {
+            background: linear-gradient(180deg, #101A25 3%, #182636 50%, #101A25 97%);
+            padding: 100px 0;
+        }
+
+        .programs-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .programs-header p {
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .program-card {
+            background: rgba(26, 48, 68, 0.6);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 36px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--cyan);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .program-card:hover {
+            border-color: rgba(0, 231, 239, 0.4);
+            box-shadow: 0 0 20px rgba(105, 228, 237, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .program-card:hover::before {
+            opacity: 1;
+        }
+
+        .program-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(0, 231, 239, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .program-tag {
+            display: inline-block;
+            background: rgba(0, 231, 239, 0.12);
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .program-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .program-card p {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .program-highlight {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--cyan);
+            font-size: 15px;
+        }
+
+        /* ========================================
+           Process Steps
+           ======================================== */
+        .process {
+            background: radial-gradient(at top center, #182636 44%, #101A25 71%);
+            padding: 100px 0;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .process-header p {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 42px;
+            left: 12%;
+            right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--cyan), transparent);
+            opacity: 0.3;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: var(--dark-primary);
+            border: 2px solid var(--cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover .step-number {
+            background: var(--cyan);
+            color: var(--dark-primary);
+            box-shadow: 0 0 20px var(--cyan-glow-soft);
+        }
+
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           Advantages Section
+           ======================================== */
+        .advantages {
+            background: var(--dark-deep);
+            padding: 100px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .advantages-content {
+            max-width: 500px;
+        }
+
+        .advantages-content p {
+            margin-bottom: 32px;
+        }
+
+        .advantage-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .advantage-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .advantage-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: rgba(0, 231, 239, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--cyan);
+        }
+
+        .advantage-item h4 {
+            margin-bottom: 4px;
+        }
+
+        .advantage-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Comparison cards on the right side */
+        .comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .compare-card {
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .compare-card.negative {
+            border: 2px solid var(--red);
+            box-shadow: 0 6px 14px rgba(239, 68, 68, 0.2);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), transparent);
+        }
+
+        .compare-card.positive {
+            border: 2px solid var(--green);
+            box-shadow: 0 6px 14px rgba(16, 185, 129, 0.2);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), transparent);
+        }
+
+        .compare-card h4 {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .compare-card.negative h4 {
+            color: var(--red);
+        }
+
+        .compare-card.positive h4 {
+            color: var(--green);
+        }
+
+        .compare-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .compare-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .compare-list li .icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .compare-list li .icon-x {
+            color: var(--red);
+        }
+
+        .compare-list li .icon-check {
+            color: var(--green);
+        }
+
+        /* ========================================
+           CTA Section
+           ======================================== */
+        .cta {
+            background: radial-gradient(at center, #182636 30%, #101A25 80%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 231, 239, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 36px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .cta-contact {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cta-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .cta-contact-item svg {
+            color: var(--cyan);
+            flex-shrink: 0;
+        }
+
+        .cta-contact-item a {
+            color: var(--text-muted);
+        }
+
+        .cta-contact-item a:hover {
+            color: var(--cyan);
+        }
+
+        /* ========================================
+           Footer
+           ======================================== */
+        .footer {
+            background: var(--dark-footer);
+            border-top: 2px solid var(--border-subtle);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        .footer h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .footer-contact-item svg {
+            color: var(--cyan);
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            color: #727476;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            font-size: 13px;
+            color: #727476;
+        }
+
+        /* ========================================
+           Trust Bar
+           ======================================== */
+        .trust-bar {
+            background: var(--dark-primary);
+            padding: 28px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .trust-bar p {
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .trust-bar .trust-number {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--cyan);
+            font-size: 18px;
+        }
+
+        /* ========================================
+           FAQ Section
+           ======================================== */
+        .faq {
+            background: linear-gradient(180deg, #101A25 3%, #182636 50%, #101A25 97%);
+            padding: 100px 0;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: rgba(26, 48, 68, 0.6);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 231, 239, 0.3);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            width: 100%;
+            padding: 24px 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--white);
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .faq-question svg {
+            flex-shrink: 0;
+            color: var(--cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding: 0 28px 24px;
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           Footer Disclaimer
+           ======================================== */
+        .footer-disclaimer {
+            font-size: 12px !important;
+            color: #5a5c5e !important;
+            text-align: center;
+            padding-bottom: 20px;
+            line-height: 1.6 !important;
+        }
+
+        /* ========================================
+           Scroll Reveal Animation
+           ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for grid children */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ========================================
+           Counter Animation
+           ======================================== */
+        .stat-number[data-target] {
+            transition: color 0.3s ease;
+        }
+
+        /* ========================================
+           Responsive Design
+           ======================================== */
+        @media (max-width: 1024px) {
+            h1, .hero h1 { font-size: 40px; }
+            h2, .cta h2 { font-size: 34px; }
+            .stat-number { font-size: 36px; }
+            .steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .steps::before { display: none; }
+            .advantages-grid { gap: 40px; }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-cards {
+                height: 320px;
+                max-width: 400px;
+                margin: 0 auto;
+                margin-left: auto;
+            }
+
+            .hero-card {
+                width: 320px;
+            }
+
+            .hero-card-3 { left: 40px; top: 0; }
+            .hero-card-2 { left: 20px; top: 50px; }
+            .hero-card-1 { left: 0; top: 100px; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 70px 0; }
+
+            h1, .hero h1 { font-size: 32px; }
+            h2, .cta h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+
+            .nav-links { display: none; }
+            .nav-mobile-toggle { display: block; }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--dark-nav);
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border-subtle);
+            }
+
+            .hero { padding: 140px 0 80px; }
+            .hero p { font-size: 17px; }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .stat-number { font-size: 32px; }
+
+            .programs-grid { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr; gap: 32px; }
+            .advantages-grid { grid-template-columns: 1fr; }
+
+            .hero-buttons,
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                justify-content: center;
+                font-size: 16px;
+                padding: 16px 28px;
+            }
+
+            .cta-contact {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .faq-question { font-size: 16px; padding: 20px 22px; }
+            .faq-answer p { padding: 0 22px 20px; font-size: 15px; }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 16px; }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            html { scroll-behavior: auto; }
+            .hero-card { animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ Navigation ============ -->
+    <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo" aria-label="Chito IT – Nach oben">
+                <img src="logo-full.webp" alt="Chito IT" style="height: 45px; width: auto;">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#programme">Förderprogramme</a></li>
+                <li><a href="#ablauf">Ablauf</a></li>
+                <li><a href="#vorteile">Vorteile</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://www.chito-it.de/formular/" class="btn nav-cta">Erstgespräch buchen</a></li>
+            </ul>
+
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ Hero Section ============ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#00E7EF"/><path d="M5 8L7 10L11 6" stroke="#101A25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Fördermittel für KMU
+                </div>
+                <h1>Bis zu <span class="highlight">50&nbsp;% Zuschuss</span> für Deine IT-Modernisierung</h1>
+                <p>Du willst Dein Unternehmen digitalisieren, aber die Kosten bremsen Dich? Wir zeigen Dir, welche Förderprogramme Du nutzen kannst – und übernehmen den gesamten Antrag für Dich.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.chito-it.de/formular/" class="btn btn-primary btn-glow">
+                        Kostenloses Erstgespräch
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#programme" class="btn btn-outline">Förderprogramme ansehen</a>
+                </div>
+            </div>
+
+            <!-- Floating Card Stack -->
+            <div class="hero-cards" aria-hidden="true">
+                <div class="hero-card hero-card-3">
+                    <div class="hero-card-check">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00E7EF"/><path d="M5 8L7 10L11 6" stroke="#101A25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        ISB Rheinland-Pfalz
+                    </div>
+                    <div class="hero-card-value">Beratung gefördert</div>
+                </div>
+                <div class="hero-card hero-card-2">
+                    <div class="hero-card-check">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00E7EF"/><path d="M5 8L7 10L11 6" stroke="#101A25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        KfW Kredit
+                    </div>
+                    <div class="hero-card-value">ab 0,1 % Zins</div>
+                </div>
+                <div class="hero-card hero-card-1">
+                    <div class="hero-card-check">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#00E7EF"/><path d="M5 8L7 10L11 6" stroke="#101A25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        BAFA Zuschuss
+                    </div>
+                    <div class="hero-card-value">bis zu 1.750 €</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Trust Bar ============ -->
+    <div class="trust-bar reveal">
+        <div class="container">
+            <p>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21V19C17 17.94 16.58 16.92 15.83 16.17C15.08 15.42 14.06 15 13 15H5C3.94 15 2.92 15.42 2.17 16.17C1.42 16.92 1 17.94 1 19V21" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#00E7EF" stroke-width="2"/><path d="M23 21V19C22.99 18.11 22.7 17.25 22.16 16.55C21.62 15.85 20.86 15.35 20 15.13" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13C16.86 3.35 17.62 3.85 18.17 4.55C18.71 5.26 19 6.12 19 7C19 7.88 18.71 8.74 18.17 9.45C17.62 10.15 16.86 10.65 16 10.87" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="trust-number">+100</span> Unternehmen vertrauen auf Chito IT
+            </p>
+        </div>
+    </div>
+
+    <!-- ============ Stats Bar ============ -->
+    <section class="stats" aria-label="Kennzahlen">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="50" data-suffix="%">0%</div>
+                    <div class="stat-label">Zuschuss möglich</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number" data-target="4" data-prefix="+" data-suffix="">0</div>
+                    <div class="stat-label">Förderprogramme</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number" data-target="0" data-prefix="" data-suffix="€">0€</div>
+                    <div class="stat-label">Erstgespräch</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number" data-target="2026" data-prefix="bis " data-suffix="">2026</div>
+                    <div class="stat-label">Förderzeitraum</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Förderprogramme ============ -->
+    <section class="programs" id="programme">
+        <div class="container">
+            <div class="programs-header reveal">
+                <span class="section-subtitle">Förderprogramme</span>
+                <h2>Diese Programme sichern Dir bares Geld</h2>
+                <p>Es gibt mehrere staatliche Programme, die speziell für kleine und mittlere Unternehmen gemacht sind. Wir finden das passende für Dich.</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- BAFA -->
+                <div class="program-card reveal">
+                    <div class="program-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12L11 14L15 10M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="program-tag">Bundesweit</div>
+                    <h3>BAFA – Förderung unternehmerischen Know-hows</h3>
+                    <p>Zuschuss für professionelle IT-Beratung zu Digitalisierung, IT-Sicherheit und Prozessoptimierung. Ideal für den Einstieg.</p>
+                    <span class="program-highlight">Bis zu 50 % Zuschuss · max. 1.750 €</span>
+                </div>
+
+                <!-- Betriebsberatungsprogramm RLP -->
+                <div class="program-card reveal reveal-delay-1">
+                    <div class="program-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="program-tag">Rheinland-Pfalz</div>
+                    <h3>Betriebsberatungsprogramm RLP</h3>
+                    <p>Landesförderung für Beratungsleistungen rund um Digitalisierung und IT-Strategie. Speziell für KMU in Rheinland-Pfalz.</p>
+                    <span class="program-highlight">Bis zu 1.500 € Zuschuss</span>
+                </div>
+
+                <!-- KfW -->
+                <div class="program-card reveal reveal-delay-2">
+                    <div class="program-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1V23M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="program-tag">Bundesweit</div>
+                    <h3>KfW-Kredit für Digitalisierung</h3>
+                    <p>Zinsgünstiger Kredit der KfW-Bank für Investitionen in digitale Infrastruktur, Hardware und Software.</p>
+                    <span class="program-highlight">Ab 1,0 % eff. Jahreszins</span>
+                </div>
+
+                <!-- IBI-EFRE -->
+                <div class="program-card reveal reveal-delay-3">
+                    <div class="program-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#00E7EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="program-tag">Rheinland-Pfalz / EU</div>
+                    <h3>IBI-EFRE Innovationsförderung</h3>
+                    <p>EU-kofinanzierte Förderung für innovative IT-Projekte, KI-Anwendungen und digitale Geschäftsmodelle in Rheinland-Pfalz.</p>
+                    <span class="program-highlight">Bis zu 50 % Zuschuss · max. 100.000 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 4-Schritte Ablauf ============ -->
+    <section class="process" id="ablauf">
+        <div class="container">
+            <div class="process-header reveal">
+                <span class="section-subtitle">So läuft's ab</span>
+                <h2>In 4 Schritten zu Deiner Förderung</h2>
+                <p>Kein Papierkram-Chaos. Wir kümmern uns um alles – Du lehnst Dich zurück.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <h3>Erstgespräch</h3>
+                    <p>Kostenlos und unverbindlich. Wir lernen Dein Unternehmen und Deine IT-Situation kennen.</p>
+                </div>
+                <div class="step reveal reveal-delay-1">
+                    <div class="step-number">2</div>
+                    <h3>Förder-Check</h3>
+                    <p>Wir prüfen, welche Programme für Dich in Frage kommen und wie hoch Dein Zuschuss sein kann.</p>
+                </div>
+                <div class="step reveal reveal-delay-2">
+                    <div class="step-number">3</div>
+                    <h3>Antragstellung</h3>
+                    <p>Wir übernehmen den kompletten Antrag – Du unterschreibst nur noch.</p>
+                </div>
+                <div class="step reveal reveal-delay-3">
+                    <div class="step-number">4</div>
+                    <h3>Umsetzung</h3>
+                    <p>Nach Bewilligung starten wir direkt mit der IT-Modernisierung. Alles aus einer Hand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Vorteile ============ -->
+    <section class="advantages" id="vorteile">
+        <div class="container">
+            <div class="advantages-grid">
+                <div class="advantages-content reveal">
+                    <span class="section-subtitle">Warum Chito IT</span>
+                    <h2>Dein IT-Partner aus der Region</h2>
+                    <p>Wir sind kein anonymes Callcenter – wir sitzen in der Pfalz und kennen die Herausforderungen lokaler Unternehmen. Bei uns bekommst Du persönliche Beratung, faire Preise und echte Ergebnisse.</p>
+
+                    <ul class="advantage-list">
+                        <li class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <h4>Regional & persönlich</h4>
+                                <p>Ansprechpartner vor Ort – kein Ticket-System, sondern echte Kommunikation.</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1V23M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h4>Transparente Fixpreise</h4>
+                                <p>Keine versteckten Kosten. Du weißt vorher, was es kostet.</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h4>IT-Sicherheit inklusive</h4>
+                                <p>Jede Lösung wird von Anfang an sicher gedacht – DSGVO-konform und gehärtet.</p>
+                            </div>
+                        </li>
+                        <li class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h4>Förderanträge? Machen wir.</h4>
+                                <p>Wir kennen die Programme, die Formulare und die Fristen – Du sparst Dir den Aufwand.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison reveal reveal-delay-2">
+                    <div class="compare-card negative">
+                        <h4>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#EF4444" stroke-width="2"/><path d="M15 9L9 15M9 9L15 15" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/></svg>
+                            Andere IT-Firmen
+                        </h4>
+                        <ul class="compare-list">
+                            <li><span class="icon icon-x">✕</span> Stundensätze ohne Obergrenze</li>
+                            <li><span class="icon icon-x">✕</span> Kein Wissen über Förderprogramme</li>
+                            <li><span class="icon icon-x">✕</span> Anonymer Support per Ticket</li>
+                            <li><span class="icon icon-x">✕</span> IT-Sicherheit als teures Add-on</li>
+                        </ul>
+                    </div>
+
+                    <div class="compare-card positive">
+                        <h4>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/><path d="M8 12L11 15L16 9" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Chito IT
+                        </h4>
+                        <ul class="compare-list">
+                            <li><span class="icon icon-check">✓</span> Transparente Fixpreise</li>
+                            <li><span class="icon icon-check">✓</span> Förderanträge inklusive</li>
+                            <li><span class="icon icon-check">✓</span> Persönlicher Ansprechpartner vor Ort</li>
+                            <li><span class="icon icon-check">✓</span> IT-Sicherheit von Anfang an dabei</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FAQ Section ============ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header reveal">
+                <span class="section-subtitle">Häufige Fragen</span>
+                <h2>Das wirst Du Dich fragen</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        Wer kann die Förderung beantragen?
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kleine und mittlere Unternehmen (KMU) mit Sitz in Deutschland. Je nach Förderprogramm gelten unterschiedliche Größengrenzen – wir prüfen im Erstgespräch, welche Programme für Dich in Frage kommen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question" aria-expanded="false">
+                        Muss der Antrag vor Projektstart gestellt werden?
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, bei den meisten Programmen muss der Antrag VOR Beginn der Maßnahme bewilligt sein. Deshalb ist es wichtig, frühzeitig mit der Planung zu starten – wir helfen Dir dabei.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question" aria-expanded="false">
+                        Können mehrere Förderprogramme kombiniert werden?
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ja, unter bestimmten Bedingungen ist eine Kombination mehrerer Förderprogramme möglich. Wir analysieren Deine Situation und holen das Maximum für Dich raus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question" aria-expanded="false">
+                        Was kostet das Erstgespräch?
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nichts – die Erstberatung ist 100&nbsp;% kostenlos und unverbindlich. Wir schauen gemeinsam, was möglich ist, und Du entscheidest danach in Ruhe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA Section ============ -->
+    <section class="cta" id="kontakt">
+        <div class="container">
+            <div class="cta-inner reveal">
+                <span class="section-subtitle">Jetzt starten</span>
+                <h2>Bereit für Deine <span class="highlight">IT-Förderung</span>?</h2>
+                <p>Das Erstgespräch ist kostenlos und unverbindlich. Lass uns gemeinsam prüfen, welche Förderung für Dich drin ist.</p>
+
+                <div class="cta-buttons">
+                    <a href="https://www.chito-it.de/formular/" class="btn btn-primary btn-glow">
+                        Kostenloses Erstgespräch buchen
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="tel:+4962379169460" class="btn btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.97C20.56 21 20.12 21.02 19.67 21.02C10.14 21.02 2.42 13.3 2.42 3.77C2.42 3.32 2.44 2.88 2.47 2.44C2.51 1.88 2.96 1.44 3.52 1.44H6.52C7.02 1.44 7.45 1.8 7.52 2.3C7.58 2.74 7.68 3.17 7.82 3.58C7.97 4.04 7.84 4.55 7.47 4.88L6.09 6.26C7.51 8.88 9.62 10.99 12.24 12.41L13.62 11.03C13.95 10.66 14.46 10.53 14.92 10.68C15.33 10.82 15.76 10.92 16.2 10.98C16.7 11.05 17.06 11.48 17.06 11.98V14.98" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        06237 9169460
+                    </a>
+                </div>
+
+                <div class="cta-contact">
+                    <div class="cta-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <a href="mailto:c.schmidt@chito-it.de">c.schmidt@chito-it.de</a>
+                    </div>
+                    <div class="cta-contact-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                        Fußgönheim, Pfalz
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Footer ============ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="logo-full.webp" alt="Chito IT Logo" style="height: 36px; width: auto;">
+                    </div>
+                    <p>Dein IT-Partner aus der Pfalz. Wir helfen kleinen und mittleren Unternehmen, ihre IT zu modernisieren – und nutzen dafür staatliche Förderprogramme, damit Du weniger zahlst.</p>
+                </div>
+
+                <div>
+                    <h4>Kontakt</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61 3.95 5.32 5.64 3.64C7.32 1.95 9.61 1 12 1C14.39 1 16.68 1.95 18.36 3.64C20.05 5.32 21 7.61 21 10Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+                        Merowinger Str. 8, 67136 Fußgönheim
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.97C20.56 21 20.12 21.02 19.67 21.02C10.14 21.02 2.42 13.3 2.42 3.77C2.42 3.32 2.44 2.88 2.47 2.44C2.51 1.88 2.96 1.44 3.52 1.44H6.52C7.02 1.44 7.45 1.8 7.52 2.3C7.58 2.74 7.68 3.17 7.82 3.58C7.97 4.04 7.84 4.55 7.47 4.88L6.09 6.26C7.51 8.88 9.62 10.99 12.24 12.41L13.62 11.03C13.95 10.66 14.46 10.53 14.92 10.68C15.33 10.82 15.76 10.92 16.2 10.98C16.7 11.05 17.06 11.48 17.06 11.98V14.98" stroke="currentColor" stroke-width="2"/></svg>
+                        <a href="tel:+4962379169460">06237 9169460</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/><path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2"/></svg>
+                        <a href="mailto:c.schmidt@chito-it.de">c.schmidt@chito-it.de</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.chito-it.de">&larr; Zurück zu chito-it.de</a></li>
+                        <li><a href="#programme">Förderprogramme</a></li>
+                        <li><a href="#ablauf">Ablauf</a></li>
+                        <li><a href="#vorteile">Vorteile</a></li>
+                        <li><a href="https://www.chito-it.de/impressum/">Impressum</a></li>
+                        <li><a href="https://www.chito-it.de/datenschutz/">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer-disclaimer">Hinweis: Die Informationen zu Förderprogrammen sind ohne Gewähr. Fördervoraussetzungen und Verfügbarkeit können sich ändern. Stand: März 2026</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chito IT · Partnerbetrieb von Duschl Media</p>
+                <div class="footer-bottom-links">
+                    <a href="https://www.chito-it.de/impressum/">Impressum</a>
+                    <a href="https://www.chito-it.de/datenschutz/">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ JavaScript ============ -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const isOpen = navLinks.classList.contains('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+        });
+
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll Reveal with IntersectionObserver
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Animated Counters
+        const counterElements = document.querySelectorAll('.stat-number[data-target]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterElements.forEach(el => counterObserver.observe(el));
+
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const duration = 1500;
+            const start = performance.now();
+
+            // Special case for "0€" and "bis 2026"
+            if (target === 0 && suffix === '€') {
+                el.textContent = '0 €';
+                return;
+            }
+            if (target === 2026) {
+                el.textContent = 'bis 2026';
+                return;
+            }
+
+            function update(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(eased * target);
+
+                if (prefix === '+') {
+                    el.textContent = '+' + current + suffix;
+                } else {
+                    el.textContent = current + ' ' + suffix;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    if (prefix === '+') {
+                        el.textContent = '+' + target + suffix;
+                    } else {
+                        el.textContent = target + ' ' + suffix;
+                    }
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+
+                // Close all others
+                document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                    openItem.classList.remove('open');
+                    openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Navbar shrink on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(10, 10, 10, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.style.background = 'var(--dark-nav)';
+                nav.style.backdropFilter = 'none';
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>
