@@ -61,6 +61,8 @@
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            max-width: 100vw;
         }
 
         body {
@@ -70,6 +72,7 @@
             background: var(--dark-primary);
             line-height: 1.7;
             overflow-x: hidden;
+            max-width: 100vw;
             position: relative;
         }
 
@@ -492,6 +495,7 @@
             border-top: 1px solid rgba(0, 231, 239, 0.08);
             border-bottom: 1px solid rgba(0, 231, 239, 0.08);
             position: relative;
+            overflow: hidden;
         }
 
         .stats::before {
@@ -540,6 +544,7 @@
             background: var(--dark-secondary);
             padding: 100px 0;
             position: relative;
+            overflow: hidden;
             border-top: 1px solid rgba(0, 231, 239, 0.06);
         }
 
@@ -673,6 +678,7 @@
             background: var(--dark-primary);
             padding: 100px 0;
             position: relative;
+            overflow: hidden;
             border-top: 1px solid rgba(0, 231, 239, 0.06);
         }
 
@@ -1283,8 +1289,36 @@
                 border-bottom: 1px solid var(--border-subtle);
             }
 
-            .hero { padding: 140px 0 80px; }
+            .hero { padding: 140px 0 80px; overflow: hidden; }
             .hero p { font-size: 17px; }
+
+            .hero-cards {
+                position: relative;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 20px 0;
+                overflow: hidden;
+            }
+
+            .hero-card {
+                position: relative;
+                width: 100%;
+                max-width: 100%;
+                left: 0 !important;
+                top: 0 !important;
+                transform: none !important;
+                animation: none !important;
+                margin-bottom: 12px;
+            }
+
+            .hero-card-1, .hero-card-2, .hero-card-3 {
+                position: relative;
+                left: 0 !important;
+                top: 0 !important;
+                transform: none !important;
+            }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
