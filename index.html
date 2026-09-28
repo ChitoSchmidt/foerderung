@@ -628,6 +628,13 @@
             line-height: 1;
         }
 
+        .calc-hint {
+            padding: 18px 0 20px;
+            border-top: 1px solid rgba(44, 58, 77, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
         .calc-note {
             max-width: 640px;
             margin: 28px auto 0;
@@ -1522,7 +1529,7 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#00E7EF"/><path d="M5 8L7 10L11 6" stroke="#101A25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Offiziell zugelassen für die KMU-Beratungsförderung des Bundes
+                    Registriertes Beratungsunternehmen für die KMU-Beratungsförderung des Bundes
                 </div>
                 <h1>Bis zu <span class="highlight">50&nbsp;% Zuschuss</span> für Deine IT-Beratung</h1>
                 <p>Du willst wissen, wo Deine IT steht und was als Nächstes sinnvoll ist? Der Bund übernimmt bis zu 50&nbsp;% der Kosten für eine professionelle IT-Beratung. Chito IT ist dafür als Beratungsunternehmen registriert und begleitet Dich vom Antrag bis zum fertigen Beratungsbericht.</p>
@@ -1605,20 +1612,23 @@
                 <h2>So rechnet sich das für Dich</h2>
             </div>
 
-            <dl class="calc-ledger reveal reveal-delay-1">
-                <div class="calc-row">
-                    <dt>Beratungskosten</dt>
-                    <dd>3.500&nbsp;€ <span class="calc-unit">netto</span></dd>
-                </div>
-                <div class="calc-row calc-row-grant">
-                    <dt>Zuschuss vom Bund</dt>
-                    <dd><span class="calc-sign" aria-hidden="true">&minus;</span><span class="visually-hidden">minus </span>1.750&nbsp;€</dd>
-                </div>
-                <div class="calc-row calc-row-total">
-                    <dt>Dein Anteil</dt>
-                    <dd>1.750&nbsp;€</dd>
-                </div>
-            </dl>
+            <div class="calc-ledger reveal reveal-delay-1">
+                <dl>
+                    <div class="calc-row">
+                        <dt>Beratungskosten</dt>
+                        <dd>3.500&nbsp;€ <span class="calc-unit">netto</span></dd>
+                    </div>
+                    <div class="calc-row calc-row-grant">
+                        <dt>Zuschuss vom Bund</dt>
+                        <dd><span class="calc-sign" aria-hidden="true">&minus;</span><span class="visually-hidden">minus </span>1.750&nbsp;€</dd>
+                    </div>
+                    <div class="calc-row calc-row-total">
+                        <dt>Dein Anteil</dt>
+                        <dd>1.750&nbsp;€</dd>
+                    </div>
+                </dl>
+                <p class="calc-hint">Du bezahlst die Beratung zunächst vollständig. Der Zuschuss wird nach Einreichung des Verwendungsnachweises vom Bundesamt an Dich ausgezahlt, in der Regel innerhalb weniger Wochen.</p>
+            </div>
 
             <p class="calc-note reveal reveal-delay-2">Pro Jahr sind bis zu zwei geförderte Beratungen möglich, bis Ende 2026 insgesamt bis zu fünf.</p>
         </div>
@@ -1629,7 +1639,7 @@
         <div class="container">
             <div class="programs-header reveal">
                 <span class="section-subtitle">Förderprogramme</span>
-                <h2>Diese Programme sichern Dir bares Geld</h2>
+                <h2>Diese Programme kommen für Dich in Frage</h2>
                 <p>Es gibt mehrere staatliche Programme, die speziell für kleine und mittlere Unternehmen gemacht sind. Wir finden das passende für Dich.</p>
             </div>
 
@@ -1653,7 +1663,7 @@
                     <div class="program-tag">Rheinland-Pfalz</div>
                     <h3>Betriebsberatungsprogramm RLP</h3>
                     <p>Landesförderung für Beratungsleistungen rund um Digitalisierung und IT-Strategie. Speziell für KMU in Rheinland-Pfalz.</p>
-                    <span class="program-highlight">Bis zu 1.500 € Zuschuss</span>
+                    <span class="program-highlight">Zuschuss für Beratungsleistungen, Höhe nach Programmkonditionen</span>
                 </div>
 
                 <!-- KfW -->
